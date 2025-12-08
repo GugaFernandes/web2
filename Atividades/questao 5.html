@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Joana Barbosa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .container {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      background: white;
+    }
+    .sidebar {
+      background: #333;
+      color: white;
+      width: 260px;
+      padding: 20px;
+    }
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 5px;
+      margin-top: 20px;
+    }
+    .sidebar p {
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 10px 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+    .sidebar ul li {
+      margin: 6px 0;
+    }
+    /* Conteúdo principal */
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+    .content h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .content > p {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+    .content h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .experiencia {
+      margin-top: 20px;
+    }
+    .cargo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cargo h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .ano {
+      font-size: 14px;
+      color: #666;
+    }
+    .empresa {
+      margin: 4px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .experiencia ul {
+      margin: 0 0 20px 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Lateral esquerda -->
+    <aside class="sidebar">
+      <img src="img/joana.jpeg" alt="Foto de perfil">
+      <h2>Pessoal</h2>
+      <p><strong>Nome</strong><br>Joana Barbosa</p>
+      <p><strong>Endereço</strong><br>Rua da Paz, 250<br>7000-011 Lisboa</p>
+      <p><strong>Número de telefone</strong><br>930002214</p>
+      <p><strong>Email</strong><br>exemplo@somemail.pt</p>
+
+      <h2>Interesses</h2>
+      <ul>
+        <li>Música</li>
+        <li>Leitura</li>
+        <li>Fotografia</li>
+        <li>Viagens</li>
+      </ul>
+    </aside>
+    <main class="content">
+      <h1>Joana Barbosa</h1>
+      <p>
+        Uma marketer digital com sentido de missão e com mais de três anos de experiência em conduzir iniciativas promocionais.
+        Sou uma especialista em online marketing, lead generation e nurturing. Tenho uma comunicação exemplar, aptidões
+        interpessoais e trabalho bem sobre pressão de forma a atingir os objetivos.
+      </p>
+      <h2>Experiência profissional</h2>
+      <div class="experiencia">
+        <div class="cargo">
+          <h3>Junior SEO Marketer</h3>
+          <span class="ano">2017 - 2019</span>
+        </div>
+        <p class="empresa">Cyanca, Lisboa</p>
+        <ul>
+          <li>Página oficial SEO</li>
+          <li>Estratégias de linkbuilding</li>
+          <li>Criação de conteúdo relevante</li>
+          <li>Trabalho com ferramentas online: Ahrefs, Google Analytics, Google Search Console, Google Ads</li>
+        </ul>
+      </div>
+
+      <div class="experiencia">
+        <div class="cargo">
+          <h3>Assistente de Vendas</h3>
+          <span class="ano">2015 - 2016</span>
+        </div>
+        <p class="empresa">Salsa, Lisboa</p>
+        <ul>
+          <li>Comunicação direta com os clientes</li>
+          <li>Gestão de inventário</li>
+          <li>Apoio a clientes</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
