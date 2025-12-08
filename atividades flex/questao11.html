@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando Eventos</title>
+</head>
+
+<style>
+    body {
+        padding: 0%;
+        margin: 0%;
+    }
+    #container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+</style>
+<body>
+    <div id="container">
+    <button id="alertButton">Clique aqui</button>
+    <input type="text" id="textInput" placeholder="Digite algo">
+    <div id="hoverDiv">Passe o mouse aqui</div>
+    <select id="colorSelect">
+    <option value="">Escolha uma cor</option>
+    <option value="blue">Azul</option>
+    <option value="green">Verde</option>
+    <option value="red">Vermelho</option>
+    </select>
+    </div>
+
+    <script>
+        
+        const alertButton = document.getElementById("alertButton");
+        alertButton.addEventListener("click", () => {
+            alert("O botão foi clicado!");
+        });
+
+        const textInput = document.getElementById("textInput");
+        textInput.addEventListener("keydown", (event) => {
+            console.log("Tecla pressionada:", event.key);
+        });
+
+        textInput.addEventListener("focus", () => {
+            textInput.style.backgroundColor = "yellow";
+        });
+
+        textInput.addEventListener("blur", () => {
+            textInput.style.backgroundColor = "";
+        });
+
+        const hoverDiv = document.getElementById("hoverDiv");
+        hoverDiv.addEventListener("mouseover", () => {
+            hoverDiv.style.backgroundColor = "lightblue";
+        });
+
+        hoverDiv.addEventListener("mouseout", () => {
+            hoverDiv.style.backgroundColor = "";
+        });
+
+        const colorSelect = document.getElementById("colorSelect");
+        colorSelect.addEventListener("change", () => {
+            document.body.style.backgroundColor = colorSelect.value;
+        });
+
+    </script>
+</body>
+</html>
