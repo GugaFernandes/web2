@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O que é JavaScript?</title>
+    </head>
+    <body>
+        <h1>O que é JavaScript?</h1>
+        <p>É uma linguagem de programação, interpretada, para
+            desenvolvimento web qual é executada no navegador do
+            cliente em um sandbox, que limita o acesso aos recursos
+            do sistema operacional, fornecendo interfaces predefinidas,
+            a forma de acesso a recursos do sistema se faz por meio
+            de objetos globais disponibilizados ao navegador, como:
+            document, console, history, local storage. A motivação para o
+            surgimento do JavaScript foi a pouca interatividade das
+            páginas web nos anos 90.
+
+            enquanto a execução no navegador acontece no computador do usuário
+            para interações rápidas, a execução no servidor ocorre em um
+            servidor
+            remoto para processar dados e interagir com bancos para enviar o
+            resultado ao navegador.
+
+            A tipagem é dinâmica e forte, permitindo que variáveis possam ser
+            atribuidas e reatribuidas a qualquer momento, sem a necessidade de
+            declarar seu tipo previamente. Os tipos de dados nativos da
+            linguagem são: Number, String, Boolean, Object, Array e Function.
+        </p>
+        <p id="hora"> Horas -&gt
+            <span id="h"></span>
+            <span id="min"></span>
+            <span id="s"></span>
+            <span id="ms"></span>
+            <button onclick="continuar()" id="comecar">começar</button>
+        </p>
+
+        <script>
+        console.log("Olá mundo!")
+        window.alert("alerta")
+        
+        
+        
+        let i;
+        function continuar(){
+            if(i==null){
+                 i = setInterval(() => {
+                    let hora = new Date();
+                    document.getElementById("h").innerHTML = hora.getHours();
+                    document.getElementById("min").innerHTML = ":"+hora.getMinutes();
+                    document.getElementById("s").innerHTML = ":" +hora.getSeconds();
+                    document.getElementById("ms").innerHTML= ":" +hora.getMilliseconds();
+                }, 1);
+                comecar.innerHTML = "parar";
+            }else{
+                clearInterval(i);
+                i=null;
+                comecar.innerHTML = "começar";
+            }
+        }
+        
+    </script>
+    </body>
+</html>
