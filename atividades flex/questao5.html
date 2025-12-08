@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc</title>
+</head>
+<body>
+    <P>Infome seu nome:</P>
+    <input type="text" id="nome">
+    <p>Informe seu peso:</p>
+    <input type="number" id="peso">
+    <p>Informe sua altura</p>
+    <input type="number" id="altura">
+    <p></p>
+    <button onclick="calcule()">calcule</button>
+    <p></p>
+    <p id="resultadoImc"></p>
+    <p id="classificacao"></p>
+
+    <img id="imgPerfil" src="/perfil.jpg" alt="imagem">
+
+    <script>
+
+        function calcule(){
+
+        const nome = document.getElementById("nome").value;
+        const peso = parseFloat(document.getElementById("peso").value);
+        const altura = parseFloat(document.getElementById("altura").value);
+        const resultadoImc = document.getElementById("resultadoImc");
+        const classificacao = document.getElementById("classificacao");
+        const img = document.getElementById("imgPerfil");
+
+        const imc = peso / (altura * altura);
+        resultadoImc.textContent = nome + ", seu IMC é " + imc.toFixed(2);
+
+        if (imc < 18.5){
+            classificacao.textContent = "Abaixo do peso";
+            img.src = "/abaixopeso.png";
+        } else if (imc < 25) {
+            classificacao.textContent = "Normal";
+            img.src = "/normal.png";
+        } else if (imc < 30){
+            classificacao.textContent = "sobrepeso";
+            img.src = "/sobrepeso.png";
+        } else if (imc < 35){
+            classificacao.textContent = "Obesidade grau 1";
+            img.src = "/obesidade1.png";
+        } else if (imc < 40){
+            classificacao.textContent = "Obesidade grau 2";
+            img.src = "/obesidade2.png";
+        } else {
+            classificacao.textContent = "Obesidade grau 3";
+            img.src = "/obesidade3.png";
+        }
+    }
+
+    </script>
+</body>
+</html>

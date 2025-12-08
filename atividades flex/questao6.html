@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primos</title>
+</head>
+<body>
+    <span>Número inicial:</span> 
+    <input type="number" id="inicial"><br></br>
+
+    <span>Número final:</span> 
+    <input type="number" id="final"><br></br>
+
+    <button onclick="verificar()">Verificar</button><br></br>
+
+    <h3>Primos neste intervalo</h3>
+    <div id="resultadoPrimos"></div>
+    
+    <script>
+
+        function ehPrimo(n){
+            if (n < 2) return false;
+
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function verificar(){
+            const inicial = parseInt(document.getElementById("inicial").value);
+            const final = parseInt(document.getElementById("final").value);
+            const resultadoPrimos = document.getElementById("resultadoPrimos");
+
+            resultadoPrimos.innerHTML = "";
+
+            for (let i = inicial; i <= final; i++) {
+                if (ehPrimo(i)) {
+                    let p = document.createElement("p");
+                    p.innerHTML = i;    
+                    resultadoPrimos.appendChild(p);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

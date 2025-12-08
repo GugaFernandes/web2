@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Variáveis</title>
+</head>
+<body>
+
+    <button onclick="mostrar()">Mostrar</button>
+
+    <p id="string"></p>
+    <p id="numero"></p>
+    <p id="booleano"></p>
+    <p id="indefinido"></p>
+    <p id="nulo"></p>
+    <p id="objeto"></p>
+    <p id="array"></p>
+
+    <script>
+        function mostrar() {
+            let nome = "Maico";               
+            let idade = 18;                   
+            let estudante = true;             
+            let endereco;                     
+            let cpf = null;                  
+            let pessoa = {cidade: "Gaspar"};  
+            let numeros = [1, 2, 3];         
+
+            document.getElementById("string").innerHTML = "Tipo da variável nome: " + typeof nome;
+            document.getElementById("numero").innerHTML = "Tipo da variável idade: " + typeof idade;
+            document.getElementById("booleano").innerHTML = "Tipo da variável estudante: " + typeof estudante;
+            document.getElementById("indefinido").innerHTML = "Tipo da variável endereço: " + typeof endereco;
+            document.getElementById("nulo").innerHTML = "Tipo da variável cpf: " + typeof cpf; 
+            document.getElementById("objeto").innerHTML = "Tipo da variável pessoa: " + typeof pessoa;
+            document.getElementById("array").innerHTML = "Tipo da variável numeros: " + typeof numeros;
+        }
+    </script>
+    
+</body>
+</html>
